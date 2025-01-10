@@ -13,6 +13,7 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-secrets.url = "github:rotemhoresh/nix-secrets";
 
     # pyprland.url = "github:hyprland-community/pyprland";
   };
