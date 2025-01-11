@@ -19,7 +19,7 @@ in {
     age.keyFile = "${homeDirectory}/.config/sops/age/keys.txt";
 
     defaultSopsFile = "${secretsFilePath}";
-    validateSopsFiles = false;
+    # validateSopsFiles = false;
 
     secrets = {
       "users/${hostSpec.username}/gpg/fingerprint" = {};

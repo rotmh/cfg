@@ -11,7 +11,7 @@
     (map lib.custom.relativeToRoot [
       "modules/common/host-spec.nix"
 
-      # "hosts/common/core/nixos.nix"
+      "hosts/common/core/nixos.nix"
       "hosts/common/core/sops.nix"
       "hosts/common/users/primary"
     ])
@@ -30,7 +30,7 @@
   # uncomment if you want home-manager to backup existing file it wants to
   # write, instead of just aborting when encountering them.
   #
-  # home-manager.backupFileExtension = "home_manager_backup";
+  home-manager.backupFileExtension = "home_manager_backup";
 
   nixpkgs = {
     overlays = [
