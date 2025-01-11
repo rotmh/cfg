@@ -22,7 +22,9 @@ in {
     # validateSopsFiles = false;
 
     secrets = {
-      "users/${hostSpec.username}/gpg/fingerprint" = {};
+      "users/${hostSpec.username}/gpg/fingerprint" = {
+        mode = "0444";
+      };
     };
   };
 }

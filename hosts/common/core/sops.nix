@@ -42,12 +42,26 @@ in {
 
       "users/${config.hostSpec.username}/ssh/private-key" = {
         path = "${config.hostSpec.home}/.ssh/id_ed25519";
+        owner = config.users.users.${config.hostSpec.username}.name;
+        group = config.users.users.${config.hostSpec.username}.group;
+        mode = "0400";
       };
       "users/${config.hostSpec.username}/ssh/public-key" = {
         path = "${config.hostSpec.home}/.ssh/id_ed25519.pub";
+        owner = config.users.users.${config.hostSpec.username}.name;
+        group = config.users.users.${config.hostSpec.username}.group;
+        mode = "0444";
       };
-      "users/${config.hostSpec.username}/gpg/private-key" = {};
-      "users/${config.hostSpec.username}/gpg/public-key" = {};
+      "users/${config.hostSpec.username}/gpg/private-key" = {
+        owner = config.users.users.${config.hostSpec.username}.name;
+        group = config.users.users.${config.hostSpec.username}.group;
+        mode = "0400";
+      };
+      "users/${config.hostSpec.username}/gpg/public-key" = {
+        owner = config.users.users.${config.hostSpec.username}.name;
+        group = config.users.users.${config.hostSpec.username}.group;
+        mode = "0444";
+      };
     };
     # The containing folders are created as root and if this is the first ~/.config/ entry,
     # the ownership is busted and home-manager can't target because it can't write into .config...
