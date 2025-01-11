@@ -1,6 +1,4 @@
-let
-  conf = import ../../config.nix;
-in {
+{hostSpec, ...}: {
   wayland.windowManager.hyprland.settings = {
     env = [
       # Try to force stuff to run on wayland
@@ -11,7 +9,7 @@ in {
       "NIXOS_OZONE_WL, 1"
 
       # Set save dir for Hyprshot (screenshots)
-      "HYPRSHOT_DIR, /home/${conf.me.username}/Images/Screenshots"
+      "HYPRSHOT_DIR, /home/${hostSpec.username}/Images/Screenshots"
     ];
   };
 }

@@ -13,7 +13,7 @@
       description = "The hostname of the host";
     };
     email = lib.mkOption {
-      type = lib.types.attrsOf lib.types.str;
+      type = lib.types.str;
       description = "The email of the user";
     };
     networking = lib.mkOption {

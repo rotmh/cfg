@@ -15,7 +15,7 @@
     xcursor = "bibata-modern-classic-xcursor";
   };
 
-  home.package = with pkgs; [
+  home.packages = with pkgs; [
     wl-clipboard
     clipse
   ];

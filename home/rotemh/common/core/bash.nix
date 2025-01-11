@@ -2,7 +2,7 @@
   programs.bash = {
     enable = true;
 
-    completion.enable = true;
+    enableCompletion = true;
 
     shellAliases = {
       grep = "grep --color=always";

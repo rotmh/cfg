@@ -1,17 +1,18 @@
 {
   inputs,
-  outputs,
   config,
   lib,
   ...
 }: {
   imports = lib.flatten [
     inputs.home-manager.nixosModules.home-manager
-    # inputs.sops-nix.nixosModules.sops
+    inputs.sops-nix.nixosModules.sops
 
     (map lib.custom.relativeToRoot [
-      "hosts/common/core/nixos.nix"
-      # "hosts/common/core/sops.nix"
+      "modules/common/host-spec.nix"
+
+      # "hosts/common/core/nixos.nix"
+      "hosts/common/core/sops.nix"
       "hosts/common/users/primary"
     ])
   ];

@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  hostSpec,
   ...
 }: {
   imports = lib.flatten [
@@ -9,7 +10,6 @@
       "modules/common/host-spec.nix"
     ])
 
-    ./nixos.nix
     ./bash.nix
     ./fonts.nix
     ./git.nix
@@ -21,20 +21,19 @@
   services.ssh-agent.enable = true;
 
   home = {
-    username = lib.mkDefault config.hostSpec.username;
-    homeDirectory = lib.mkDefault config.hostSpec.home;
+    username = lib.mkDefault hostSpec.username;
+    homeDirectory = lib.mkDefault hostSpec.home;
     stateVersion = lib.mkDefault "24.11";
     sessionPath = [
       "$HOME/bin"
     ];
     sessionVariables = {
-      FLAKE = "$HOME/src/nix-config";
-      SHELL = "zsh";
+      SHELL = "bash";
       TERM = "kitty";
       TERMINAL = "kitty";
-      VISUAL = "nvim";
-      EDITOR = "nvim";
-      MANPAGER = "batman"; # see ./cli/bat.nix
+      VISUAL = "hx";
+      EDITOR = "hx";
+      # MANPAGER = "batman"; # see ./cli/bat.nix
     };
     preferXdgDirectories = true; # whether to make programs use XDG directories whenever supported
   };

@@ -1,11 +1,12 @@
 {
   pkgs,
   config,
+  hostSpec,
   ...
 }: let
-  handle = config.hostSpec.handle;
-  publicGitEmail = config.hostSpec.email.gitHub;
-  publicKey = "${config.home.homeDirectory}/.ssh/id_yubikey.pub";
+  handle = hostSpec.handle;
+  publicGitEmail = hostSpec.email;
+  publicKey = config.sops.secrets."users/${hostSpec.username}/gpg/public-key";
 in {
   programs.git = {
     enable = true;
