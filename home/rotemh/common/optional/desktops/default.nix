@@ -7,6 +7,7 @@
     ./hyprland
     ./waybar.nix
     ./rofi.nix
+    ./dunst.nix
   ];
 
   hyprland = {
@@ -14,6 +15,8 @@
     hcursor = "bibata-modern-classic-hyprcursor";
     xcursor = "bibata-modern-classic-xcursor";
   };
+
+  services.avizo.enable = true;
 
   home.packages = with pkgs; [
     wl-clipboard

@@ -16,6 +16,7 @@
     ./kitty.nix
     ./zoxide.nix
     ./helix.nix
+    ./starship.nix
   ];
 
   services.ssh-agent.enable = true;

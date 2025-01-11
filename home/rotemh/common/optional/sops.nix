@@ -22,7 +22,7 @@ in {
     validateSopsFiles = false;
 
     secrets = {
-      "users/${hostSpec.username}/gpg/public-key" = {};
+      "users/${hostSpec.username}/gpg/fingerprint" = {};
     };
   };
 }
