@@ -20,7 +20,7 @@ in {
       # FIXME: it only address `rotemh`
       #
       # key = builtins.readFile fingerprintPath;
-      key = "B756 0EA3 E713 71C6 3E65  9224 FA54 92BE 76A4 974A";
+      key = "FA5492BE76A4974A";
     };
 
     extraConfig = {

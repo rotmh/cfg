@@ -2,6 +2,7 @@
   inputs,
   config,
   lib,
+  pkgs,
   ...
 }: {
   imports = lib.flatten [
@@ -19,6 +20,13 @@
     ./bluetooth.nix
     ./wifi.nix
   ];
+
+  programs.gnupg = {
+    agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-curses;
+    };
+  };
 
   hostSpec = {
     username = "rotemh";

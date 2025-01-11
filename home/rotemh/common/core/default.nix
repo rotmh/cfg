@@ -113,6 +113,7 @@
     gparted
 
     gnupg
+    pinentry-curses
 
     yaml-language-server
     marksman # markdown
