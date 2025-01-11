@@ -5,7 +5,7 @@
   lib,
   ...
 }: {
-  imports = [
+  imports = lib.flatten [
     inputs.home-manager.nixosModules.home-manager
     # inputs.sops-nix.nixosModules.sops
 
@@ -19,7 +19,7 @@
   hostSpec = {
     username = "rotemh";
     handle = "rotemhoresh";
-    inherit (inputs.nix-secrets) domain email userFullName networking;
+    inherit (inputs.nix-secrets) email userFullName;
   };
 
   networking.hostName = config.hostSpec.hostName;
@@ -33,7 +33,7 @@
 
   nixpkgs = {
     overlays = [
-      outputs.overlays.default
+      # outputs.overlays.default
     ];
     config = {
       allowUnfree = true;

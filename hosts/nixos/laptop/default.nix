@@ -1,5 +1,5 @@
 {lib, ...}: {
-  imports = [
+  imports = lib.flatten [
     ./hardware-configuration.nix
 
     (map lib.custom.relativeToRoot [

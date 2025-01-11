@@ -15,6 +15,7 @@
     };
     nix-secrets = {
       url = "git+ssh://git@github.com/rotemhoresh/nix-secrets.git?ref=main";
+      inputs = {};
     };
 
     # pyprland.url = "github:hyprland-community/pyprland";
@@ -30,16 +31,19 @@
 
     system = "x86_64-linux";
 
-    mkHost = host:
-      lib.nixosSystem {
+    mkHost = host: {
+      ${host} = lib.nixosSystem {
         system = system;
         specialArgs = {
           inherit inputs outputs;
+
+          lib = nixpkgs.lib.extend (self: super: {custom = import ./lib {inherit (nixpkgs) lib;};});
         };
         modules = [
           ./hosts/nixos/${host}
         ];
       };
+    };
 
     mkHostConfigs = hosts: lib.foldl (acc: set: acc // set) {} (lib.map (host: mkHost host) hosts);
 
