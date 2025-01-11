@@ -42,24 +42,30 @@ in {
 
       "users/${config.hostSpec.username}/ssh/private-key" = {
         path = "${config.hostSpec.home}/.ssh/id_ed25519";
+
         owner = config.users.users.${config.hostSpec.username}.name;
-        group = config.users.users.${config.hostSpec.username}.group;
+        inherit (config.users.users.${config.hostSpec.username}) group;
+
         mode = "0400";
       };
       "users/${config.hostSpec.username}/ssh/public-key" = {
         path = "${config.hostSpec.home}/.ssh/id_ed25519.pub";
+
         owner = config.users.users.${config.hostSpec.username}.name;
-        group = config.users.users.${config.hostSpec.username}.group;
+        inherit (config.users.users.${config.hostSpec.username}) group;
+
         mode = "0444";
       };
       "users/${config.hostSpec.username}/gpg/private-key" = {
         owner = config.users.users.${config.hostSpec.username}.name;
-        group = config.users.users.${config.hostSpec.username}.group;
+        inherit (config.users.users.${config.hostSpec.username}) group;
+
         mode = "0400";
       };
       "users/${config.hostSpec.username}/gpg/public-key" = {
         owner = config.users.users.${config.hostSpec.username}.name;
-        group = config.users.users.${config.hostSpec.username}.group;
+        inherit (config.users.users.${config.hostSpec.username}) group;
+
         mode = "0444";
       };
     };

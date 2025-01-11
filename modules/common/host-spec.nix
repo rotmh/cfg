@@ -16,7 +16,7 @@
       type = lib.types.str;
       description = "The email of the user";
     };
-    networking = lib.mkOption {
+    network = lib.mkOption {
       default = {};
       type = lib.types.attrsOf lib.types.anything;
       description = "An attribute set of networking information";

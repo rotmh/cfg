@@ -11,16 +11,19 @@
     (map lib.custom.relativeToRoot [
       "modules/common/host-spec.nix"
 
-      "hosts/common/core/nixos.nix"
-      "hosts/common/core/sops.nix"
       "hosts/common/users/primary"
     ])
+
+    ./nixos.nix
+    ./sops.nix
+    ./bluetooth.nix
+    ./wifi.nix
   ];
 
   hostSpec = {
     username = "rotemh";
     handle = "rotemhoresh";
-    inherit (inputs.nix-secrets) email userFullName;
+    inherit (inputs.nix-secrets) email network;
   };
 
   networking.hostName = config.hostSpec.hostName;
