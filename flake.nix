@@ -13,7 +13,9 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-secrets.url = "github:rotemhoresh/nix-secrets";
+    nix-secrets = {
+      url = "git+ssh://git@github.com/rotemhoresh/nix-secrets.git?ref=main";
+    };
 
     # pyprland.url = "github:hyprland-community/pyprland";
   };
@@ -29,7 +31,7 @@
     system = "x86_64-linux";
 
     mkHost = host:
-      lib.lib.nixosSystem {
+      lib.nixosSystem {
         system = system;
         specialArgs = {
           inherit inputs outputs;
