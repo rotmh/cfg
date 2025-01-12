@@ -16,12 +16,19 @@ in {
     shell = pkgs.bash; # default shell
   };
 
-  # Is seems as though it is enabled by default, thus making this enablement imposible.
-  #
-  # programs.bash.enable = true;
-
+  programs.git.enable = true;
   environment.systemPackages = with pkgs; [
     just
+    tree
+    coreutils
+    which
+    bat
+    fzf
+    jq
+    ripgrep
+    curl
+    neofetch
+    libnotify
   ];
 
   home-manager = {

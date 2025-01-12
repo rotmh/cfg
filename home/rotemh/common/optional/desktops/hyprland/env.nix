@@ -1,4 +1,4 @@
-{hostSpec, ...}: {
+{config, ...}: {
   wayland.windowManager.hyprland.settings = {
     env = [
       # Try to force stuff to run on wayland
@@ -9,7 +9,7 @@
       "NIXOS_OZONE_WL, 1"
 
       # Set save dir for Hyprshot (screenshots)
-      "HYPRSHOT_DIR, /home/${hostSpec.username}/Images/Screenshots"
+      "HYPRSHOT_DIR, ${config.xdg.userDirs.pictures}/screenshots"
     ];
   };
 }

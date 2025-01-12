@@ -44,8 +44,8 @@
     userDirs = {
       enable = true;
       createDirectories = true;
-      desktop = "${config.home.homeDirectory}/.desktop";
-      documents = "${config.home.homeDirectory}/doc";
+      desktop = "${config.home.homeDirectory}/desktop";
+      documents = "${config.home.homeDirectory}/documents";
       download = "${config.home.homeDirectory}/downloads";
       music = "${config.home.homeDirectory}/media/audio";
       pictures = "${config.home.homeDirectory}/media/images";
@@ -59,37 +59,16 @@
   };
 
   home.packages = with pkgs; [
-    ripgrep # recursive regex greping
     grex # create regexps to match test cases
-    fzf # fuzzy finder
-    jq # CLI to do json stuff
     unrar
     sqlite
     mdbook
-    tree # view dir structure
-    bat # print file content (like `cat`)
-    neofetch
-    which
     cowsay
-    curl
     ffmpeg
     openssl
     wlogout
     zlib
     qpdf
-
-    yazi
-    ttyper
-
-    # screenshots
-    grim
-    slurp
-    hyprpicker
-    hyprshot
-
-    rofi-wayland
-
-    libnotify
 
     gcc
     lldb
@@ -105,26 +84,10 @@
 
     nwg-look
 
-    stremio
-    spotify
-    discord
-    element-desktop
-
     gparted
 
     gnupg
     pinentry-curses
-
-    yaml-language-server
-    marksman # markdown
-    markdown-oxide
-    nixd
-    nixfmt-rfc-style
-    alejandra # nix formatter
-    vscode-langservers-extracted
-    taplo # toml
-    python3
-    python3Packages.python-lsp-server
   ];
 
   nix = {

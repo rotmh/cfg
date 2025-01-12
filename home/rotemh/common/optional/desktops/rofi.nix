@@ -68,7 +68,7 @@ in {
       imagebox = {
         padding = mkLiteral "20px";
         background-color = mkLiteral "transparent";
-        background-image = mkLiteral "url(\"~/Images/d.png\", height)";
+        background-image = mkLiteral "url(\"~/Images/d.png\", height)"; # FIXME
         orientation = mkLiteral "vertical";
         children = map mkLiteral ["inputbar" "dummy" "mode-switcher"];
       };

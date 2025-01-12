@@ -23,9 +23,6 @@ in {
     ];
   };
 
-  # No matter what environment we are in we want these tools for root, and the user(s)
-  programs.git.enable = true;
-
   # root's ssh key are mainly used for remote deployment, borg, and some other specific ops
   users.users.root = {
     shell = pkgs.bash;
