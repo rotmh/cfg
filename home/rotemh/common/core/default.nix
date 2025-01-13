@@ -10,6 +10,7 @@
       "modules/common/host-spec.nix"
     ])
 
+    ./fish.nix
     ./bash.nix
     ./fonts.nix
     ./git.nix
@@ -29,7 +30,7 @@
       "$HOME/bin"
     ];
     sessionVariables = {
-      SHELL = "bash";
+      SHELL = "fish";
       TERM = "kitty";
       TERMINAL = "kitty";
       VISUAL = "hx";

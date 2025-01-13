@@ -13,10 +13,11 @@ in {
 
   users.users.${hostSpec.username} = {
     name = hostSpec.username;
-    shell = pkgs.bash; # default shell
+    shell = pkgs.fish; # default shell; WARNING: this might break shit
   };
 
   # Stuff we want no matter what
+  programs.fish.enable = true;
   programs.git.enable = true;
   programs.direnv.enable = true;
   environment.systemPackages = with pkgs; [

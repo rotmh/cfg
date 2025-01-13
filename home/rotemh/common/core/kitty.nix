@@ -69,6 +69,7 @@
 
     shellIntegration = {
       enableBashIntegration = true;
+      enableFishIntegration = true;
 
       mode = "no-rc no-cursor";
     };
