@@ -11,6 +11,8 @@
       "go.sum"
 
       "node_modules/"
+
+      "flake.lock"
     ];
 
     themes = {

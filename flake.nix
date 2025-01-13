@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-secrets = {
-      url = "git+ssh://git@github.com/rotemhoresh/nix-secrets.git?ref=main";
+      url = "git+ssh://git@github.com/rotemhoresh/secrets.git?ref=main";
       inputs = {};
     };
 

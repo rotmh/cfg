@@ -36,18 +36,18 @@
     },
     "nix-secrets": {
       "locked": {
-        "lastModified": 1736636588,
+        "lastModified": 1736639430,
         "narHash": "sha256-SrkyOGsNlKANIX0PrR2tagFXectQlkn+QTxQBnknEQI=",
         "ref": "main",
-        "rev": "0f59a31ac69210f9a1be5ab5a4324e451213c722",
+        "rev": "ddae7a963c2eeb106bcf93a1b16cf93e96b4f81e",
         "revCount": 8,
         "type": "git",
-        "url": "ssh://git@github.com/rotemhoresh/nix-secrets.git"
+        "url": "ssh://git@github.com/rotemhoresh/secrets.git"
       },
       "original": {
         "ref": "main",
         "type": "git",
-        "url": "ssh://git@github.com/rotemhoresh/nix-secrets.git"
+        "url": "ssh://git@github.com/rotemhoresh/secrets.git"
       }
     },
     "nixpkgs": {

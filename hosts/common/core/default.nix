@@ -28,6 +28,8 @@
     };
   };
 
+  services.tlp.enable = true;
+
   hostSpec = {
     username = "rotemh";
     handle = "rotemhoresh";

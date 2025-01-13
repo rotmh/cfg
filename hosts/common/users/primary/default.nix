@@ -16,7 +16,9 @@ in {
     shell = pkgs.bash; # default shell
   };
 
+  # Stuff we want no matter what
   programs.git.enable = true;
+  programs.direnv.enable = true;
   environment.systemPackages = with pkgs; [
     just
     tree

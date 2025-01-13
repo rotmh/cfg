@@ -14,6 +14,10 @@ in {
     userName = handle;
     userEmail = publicGitEmail;
 
+    ignores = [
+      ".direnv/"
+    ];
+
     signing = {
       signByDefault = true;
 

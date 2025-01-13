@@ -171,6 +171,10 @@
       #battery.critical {
         color: @love;
       }
+
+      #battery.charging {
+        color: @subtle;
+      }
     '';
 
     settings = [
@@ -254,7 +258,7 @@
 
           "tooltip-format-wifi" = "{essid} ({signalStrength}%)";
           "tooltip-format-disconnected" = "Disconnected";
-          "on-click" = "nmcli device wifi connect Horesh"; # connect to WiFi
+          "on-click" = "wifi toggle";
         };
         "battery" = {
           "states" = {
