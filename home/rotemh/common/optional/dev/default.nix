@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   # languages tooling
   home.packages = with pkgs; [
     yaml-language-server
@@ -11,5 +15,15 @@
     taplo # toml
     python3
     python3Packages.python-lsp-server
+
+    (inputs.fenix.packages.${system}.latest.withComponents [
+      "cargo"
+      "clippy"
+      "rust-src"
+      "rust-std"
+      "rustc"
+      "rustfmt"
+    ])
+    rust-analyzer-nightly
   ];
 }

@@ -66,7 +66,6 @@
     mdbook
     cowsay
     ffmpeg
-    openssl
     wlogout
     zlib
     qpdf

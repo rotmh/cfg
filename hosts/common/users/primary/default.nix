@@ -32,6 +32,10 @@ in {
     curl
     neofetch
     libnotify
+    openssl
+    openssl.dev
+    openssl
+    pkg-config
   ];
 
   home-manager = {
