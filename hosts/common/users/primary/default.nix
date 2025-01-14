@@ -28,6 +28,7 @@ in {
     bat
     fzf
     jq
+    htop
     ripgrep
     curl
     neofetch

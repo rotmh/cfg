@@ -22,8 +22,6 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # pyprland.url = "github:hyprland-community/pyprland";
   };
 
   outputs = {

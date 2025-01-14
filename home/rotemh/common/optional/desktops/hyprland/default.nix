@@ -9,7 +9,7 @@
     ./autostart.nix
     ./submap.nix
 
-    # ./pyprland.nix
+    ./pyprland.nix
     ./hyprpaper.nix
     ./hyprcursor.nix
     ./hypridle.nix

@@ -3,13 +3,15 @@
     "$mainMod" = "SUPER";
 
     bind = [
-      # Something shity
-      "$mainMod, SPACE, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
+      "$mainMod, Z, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
 
       "$mainMod, C, killactive"
       "$mainMod, M, exit"
       "$mainMod, T, togglesplit"
       "$mainMod, F, fullscreen, 0"
+
+      "$mainMod, I, exec, pypr toggle spotify"
+      "$mainMod, SPACE, exec, pypr toggle term"
 
       # Windows focus navigation
       "$mainMod, H, movefocus, l"
