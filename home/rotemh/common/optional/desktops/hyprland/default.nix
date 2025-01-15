@@ -8,6 +8,7 @@
     ./vars.nix
     ./autostart.nix
     ./submap.nix
+    # ./monitors.nix
 
     ./pyprland.nix
     ./hyprpaper.nix

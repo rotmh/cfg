@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  imports = [
+    ./support
+  ];
+
   programs.helix = {
     enable = true;
 
