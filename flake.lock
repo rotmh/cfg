@@ -63,12 +63,12 @@
         "rev": "ddae7a963c2eeb106bcf93a1b16cf93e96b4f81e",
         "revCount": 8,
         "type": "git",
-        "url": "ssh://git@github.com/rotemhoresh/secrets.git"
+        "url": "ssh://git@github.com/rotmh/secrets.git"
       },
       "original": {
         "ref": "main",
         "type": "git",
-        "url": "ssh://git@github.com/rotemhoresh/secrets.git"
+        "url": "ssh://git@github.com/rotmh/secrets.git"
       }
     },
     "nixpkgs": {
