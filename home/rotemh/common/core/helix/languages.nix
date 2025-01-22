@@ -18,10 +18,8 @@
 
     language = [
       {
-        name = "text";
-        language-servers = [
-          "harper-ls"
-        ];
+        name = "c";
+        formatter.command = "${pkgs.clang-tools}/bin/clang-format";
       }
       {
         name = "haskell";
@@ -32,13 +30,16 @@
         language-servers = [
           "nixd"
         ];
-        formatter = {
-          command = lib.getExe pkgs.alejandra;
-        };
+        formatter.command = lib.getExe pkgs.alejandra;
         auto-format = true;
       }
       {
         name = "markdown";
+        language-servers = [
+          "marksman"
+          "markdown-oxide"
+          "harper-ls"
+        ];
         auto-format = true;
       }
       {

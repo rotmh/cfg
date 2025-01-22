@@ -3,6 +3,7 @@
     ./python.nix
     ./rust.nix
     ./go.nix
+    ./c.nix
 
     ./haskell.nix
 

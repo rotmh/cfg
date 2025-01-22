@@ -11,7 +11,7 @@
   ];
 
   hyprland = {
-    wallpaper = "${config.xdg.userDirs.pictures}/wallpapers/catching-the-desert.jpeg";
+    wallpaper = "${config.xdg.userDirs.pictures}/wallpapers/city-rain.png";
     hcursor = "bibata-modern-classic-hyprcursor";
     xcursor = "bibata-modern-classic-xcursor";
   };
