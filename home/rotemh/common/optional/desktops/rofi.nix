@@ -10,6 +10,10 @@ in {
 
     package = pkgs.rofi-wayland;
 
+    plugins = with pkgs; [
+      rofi-emoji-wayland
+    ];
+
     terminal = "kitty";
 
     extraConfig = {

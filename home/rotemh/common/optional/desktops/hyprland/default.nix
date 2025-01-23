@@ -17,7 +17,7 @@
     ./hyprlock.nix
     ./hyprsunset.nix
 
-    ./rose-pine-moon.nix
+    ./kanagawa.nix # theme
   ];
 
   wayland.windowManager.hyprland.enable = true;

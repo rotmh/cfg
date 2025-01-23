@@ -23,7 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    helix-editor.url = "github:helix-editor/helix";
+    helix-git = {
+      url = "github:helix-editor/helix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

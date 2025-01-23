@@ -14,7 +14,8 @@
 
   programs.helix = {
     enable = true;
-    package = inputs.helix.packages.${pkgs.system}.default;
+
+    package = inputs.helix-git.packages.${pkgs.system}.default;
 
     defaultEditor = true;
 

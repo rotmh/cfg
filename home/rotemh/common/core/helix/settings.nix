@@ -12,6 +12,8 @@
       inline-diagnostics = {
         cursor-line = "warning";
       };
+
+      lsp.display-inlay-hints = true;
     };
 
     keys = {

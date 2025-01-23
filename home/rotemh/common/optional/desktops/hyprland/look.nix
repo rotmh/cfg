@@ -6,8 +6,8 @@
 
       border_size = 2;
 
-      "col.active_border" = "$pine";
-      "col.inactive_border" = "$highlightHigh";
+      "col.active_border" = "$waveAqua1";
+      "col.inactive_border" = "$winterBlue";
 
       layout = "dwindle";
 

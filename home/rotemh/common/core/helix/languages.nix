@@ -14,9 +14,24 @@
         command = lib.getExe pkgs.nixd;
         # TODO: configurate to support external flakes
       };
+      crates-lsp.command = "/home/rotemh/projects/crates-language-server/target/debug/crates-language-server";
     };
 
     language = [
+      {
+        name = "crates";
+        scope = "source.toml";
+        injection-regex = "toml";
+        file-types = [{glob = "Cargo123.toml";}];
+        comment-token = "#";
+        language-servers = ["crates-lsp"];
+        grammar = "toml";
+        indent = {
+          tab-width = 2;
+          unit = "  ";
+        };
+        diagnostic-severity = "info";
+      }
       {
         name = "c";
         formatter.command = "${pkgs.clang-tools}/bin/clang-format";
