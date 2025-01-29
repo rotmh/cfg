@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   imports = [
     ./binds.nix
     ./rules.nix
@@ -20,6 +20,15 @@
     ./kanagawa.nix # theme
   ];
 
+  home.file.".config/hypr/scripts" = {
+    source = ./scripts;
+    recursive = true;
+  };
+
   wayland.windowManager.hyprland.enable = true;
   services.hyprpaper.enable = true;
+
+  home.packages = with pkgs; [
+    # xdg-desktop-portal-hyprland
+  ];
 }

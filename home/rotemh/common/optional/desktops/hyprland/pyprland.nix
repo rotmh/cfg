@@ -11,16 +11,9 @@
       "scratchpads"
     ]
 
-    [scratchpads.term]
-    animation = "fromBottom"
-    command = "kitty --class kitty-scratchpad"
-    class = "kitty-scratchpad"
-    size = "75% 60%"
-
-    [scratchpads.spotify]
-    animation = "fromBottom"
-    command = "spotify"
-    class = "spotify"
-    size = "75% 60%"
+    [scratchpads.chatgpt]
+    animation = "fromTop"
+    command = "firefox --new-window 'chatgpt.com/?temporary-chat=true'"
+    size = "80% 80%"
   '';
 }

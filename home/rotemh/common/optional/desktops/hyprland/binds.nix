@@ -10,8 +10,7 @@
       "$mainMod, T, togglesplit"
       "$mainMod, F, fullscreen, 0"
 
-      "$mainMod, I, exec, pypr toggle spotify"
-      "$mainMod, SPACE, exec, pypr toggle term"
+      "$mainMod, SPACE, exec, pypr toggle chatgpt"
 
       # Windows focus navigation
       "$mainMod, H, movefocus, l"

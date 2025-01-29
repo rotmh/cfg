@@ -22,15 +22,21 @@
         name = "crates";
         scope = "source.toml";
         injection-regex = "toml";
-        file-types = [{glob = "Cargo123.toml";}];
+        file-types = [
+          {
+            glob = "Cargo.toml";
+          }
+        ];
         comment-token = "#";
-        language-servers = ["crates-lsp"];
+        language-servers = [
+          "crates-lsp"
+          "taplo"
+        ];
         grammar = "toml";
         indent = {
           tab-width = 2;
           unit = "  ";
         };
-        diagnostic-severity = "info";
       }
       {
         name = "c";
