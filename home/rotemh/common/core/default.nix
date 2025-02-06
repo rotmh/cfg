@@ -18,6 +18,7 @@
     ./zoxide.nix
     ./starship.nix
     ./helix
+    ./tmux.nix
   ];
 
   services.ssh-agent.enable = true;

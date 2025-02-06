@@ -8,8 +8,8 @@
         "caps:swapescape"
       ];
 
-      repeat_rate = 40; # per second
-      repeat_delay = 400; # in milliseconds
+      repeat_rate = 60; # per second
+      repeat_delay = 300; # in milliseconds
 
       follow_mouse = 1;
 

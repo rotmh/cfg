@@ -3,5 +3,7 @@
     vscode-langservers-extracted
 
     superhtml
+
+    svelte-language-server
   ];
 }

@@ -20,15 +20,16 @@
     ./kanagawa.nix # theme
   ];
 
-  home.file.".config/hypr/scripts" = {
-    source = ./scripts;
+  home.file.".config/hypr/scripts/battery_notify.fish" = {
+    source = ./scripts/battery_notify.fish;
     recursive = true;
+    executable = true;
   };
 
   wayland.windowManager.hyprland.enable = true;
   services.hyprpaper.enable = true;
 
   home.packages = with pkgs; [
-    # xdg-desktop-portal-hyprland
+    xdg-desktop-portal-hyprland
   ];
 }

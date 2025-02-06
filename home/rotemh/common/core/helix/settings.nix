@@ -10,10 +10,10 @@
       end-of-line-diagnostics = "hint";
 
       inline-diagnostics = {
-        cursor-line = "warning";
+        cursor-line = "hint";
       };
 
-      lsp.display-inlay-hints = true;
+      # lsp.display-inlay-hints = true;
     };
 
     keys = {
