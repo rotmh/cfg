@@ -46,10 +46,39 @@
       }
 
       .modules-right {
-        padding: 4px 25px 4px 17px;
+      }
+
+      #language,
+      #bluetooth,
+      #pulseaudio,
+      #memory,
+      #network.wifi,
+      #battery {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding-right: 20px;
+      }
+
+      #battery {
+        padding-right: 25px;
+      }
+
+      #language {
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
-        background-color: rgba(0, 0, 0, 0.3);
+        padding: 4px 20px 4px 17px;
+      }
+
+      #submap {
+        margin-right: 20px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+
+        border-radius: 9px;
+
+        background-color: rgba(0, 0, 0, 0.5);
+
+        padding-left: 12px;
+        padding-right: 12px;
       }
 
       #clock {
@@ -62,6 +91,7 @@
       #workspaces {
         background: transparent;
         padding: 0;
+        margin-left: 20px;
         /*
         padding: 0 10px;
         border: solid 1px rgba(0, 0, 0, 0.15);
@@ -113,29 +143,6 @@
         padding: 0 20px;
       }
 
-      #memory,
-      #network,
-      #battery,
-      #language,
-      #bluetooth {
-        /*
-        margin-left: 16px;
-        */
-      }
-
-      #memory,
-      #battery,
-      #clock,
-      #language,
-      #network {
-        /*
-        padding: 3px 9px;
-        border-radius: 4px;
-        background-color: @base;
-        border: 1px solid @overlay;
-        */
-      }
-
       #pulseaudio {
         /*
         padding: 3px 9px;
@@ -181,7 +188,7 @@
       {
         "layer" = "top";
         "position" = "top";
-        "spacing" = 20;
+        # "spacing" = 20;
         "modules-left" = [
           "clock"
           "hyprland/workspaces"
@@ -190,6 +197,7 @@
           "hyprland/window"
         ];
         "modules-right" = [
+          "hyprland/submap"
           "hyprland/language"
           "bluetooth"
           "pulseaudio"
@@ -205,6 +213,12 @@
           "format-he" = "he";
           "on-click" = "hyprctl switchxkblayout at-translated-set-2-keyboard next";
         };
+        "hyprland/submap" = {
+          "format" = "@{}";
+          "always-on" = true;
+          "default-submap" = "@";
+          "tooltip" = false;
+        };
         "hyprland/window" = {
           "rewrite" = {
             "h" = "Helix";
@@ -218,23 +232,14 @@
           "tooltip" = false;
         };
         "pulseaudio" = {
-          "format" = "󰓃 {volume}%"; # {icon}
+          "format" = "  {volume}%";
           "format-muted" = " ";
-          # "format-icons" = {
-          #   "default" = [
-          #     " "
-          #     " "
-          #     " "
-          #     " "
-          #     " "
-          #   ];
-          # };
         };
         "bluetooth" = {
-          "format-off" = "󰂲 ";
-          "format-disabled" = "󰂲 ";
-          "format-on" = "󰂯 ";
-          "format-connected" = "{num_connections}󰂱 ";
+          "format-off" = "󰂲";
+          "format-disabled" = "󰂲";
+          "format-on" = "󰂯";
+          "format-connected" = "{num_connections}󰂱";
 
           "tooltip" = true;
           "tooltip-format" = "{device_enumerate}";
@@ -247,13 +252,13 @@
         "network#wifi" = {
           "format" = "{iframe}";
           "format-icons" = [
-            "󰤯 "
-            "󰤟 "
-            "󰤢 "
-            "󰤥 "
-            "󰤨 "
+            "󰤯"
+            "󰤟"
+            "󰤢"
+            "󰤥"
+            "󰤨"
           ];
-          "format-disconnected" = "󰤮 ";
+          "format-disconnected" = "󰤮";
           "format-wifi" = "{icon}"; # {signalStrength}%
 
           "tooltip-format-wifi" = "{essid} ({signalStrength}%)";
