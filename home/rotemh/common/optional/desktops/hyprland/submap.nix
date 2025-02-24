@@ -1,13 +1,18 @@
 {
   wayland.windowManager.hyprland.extraConfig = ''
-    bind = SHIFT, RETURN, submap, main
+    bind = SHIFT, SPACE, submap, main
     submap = main
 
       bind = , V, exec, $terminal --class clipse -e 'clipse'
       bind = , V, submap, reset
 
+      # -- TERMINAL --
       bind = SHIFT, K, exec, $terminal
       bind = SHIFT, K, submap, reset
+
+      bind = , K, exec, $terminal
+      bind = , K, submap, reset
+      # -- TERMINAL --
 
       bind = , U, exec, $menu
       bind = , U, submap, reset

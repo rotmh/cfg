@@ -16,10 +16,7 @@
 
     cargo-expand
     cargo-watch
-  ];
 
-  home.file.".config/rustfmt/rustfmt.toml".text = ''
-    format_code_in_doc_comments = true
-    format_strings = true
-  '';
+    trunk
+  ];
 }

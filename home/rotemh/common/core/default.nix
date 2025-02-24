@@ -18,6 +18,7 @@
     ./zoxide.nix
     ./starship.nix
     ./helix
+    ./wezterm
     ./tmux.nix
   ];
 

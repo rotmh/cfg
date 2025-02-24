@@ -5,5 +5,8 @@
     superhtml
 
     svelte-language-server
+
+    tailwindcss
+    tailwindcss-language-server
   ];
 }

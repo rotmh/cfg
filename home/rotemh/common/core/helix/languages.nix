@@ -9,15 +9,32 @@
         command = "harper-ls";
         args = ["--stdio"];
       };
-      rust-analyzer.config.check.command = "clippy";
+      rust-analyzer.config = {
+        check.command = "clippy";
+        cargo.features = "all";
+      };
       nixd = {
         command = lib.getExe pkgs.nixd;
         # TODO: configurate to support external flakes
       };
       crates-lsp.command = "/home/rotemh/projects/crates-language-server/target/debug/crates-language-server";
+      tailwindcss-ls = {
+        command = lib.getExe pkgs.tailwindcss-language-server;
+        config.userLanguages = {
+          rust = "html";
+          "*.rs" = "html";
+        };
+      };
     };
 
     language = [
+      {
+        name = "rust";
+        language-servers = [
+          "rust-analyzer"
+          "tailwindcss-ls"
+        ];
+      }
       {
         name = "crates";
         scope = "source.toml";

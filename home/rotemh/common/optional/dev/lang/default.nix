@@ -4,6 +4,7 @@
     ./rust.nix
     ./go.nix
     ./c.nix
+    ./lua.nix
 
     ./haskell.nix
 

@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    live-server
-    smartcat
+    lua-language-server
   ];
 }
