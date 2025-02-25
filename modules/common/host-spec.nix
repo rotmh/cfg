@@ -32,9 +32,12 @@
     home = lib.mkOption {
       type = lib.types.str;
       description = "The home directory of the user";
-      default = let
-        user = config.hostSpec.username;
-      in "/home/${user}";
+      default = let user = config.hostSpec.username; in "/home/${user}";
+    };
+    flake = lib.mkOption {
+      type = lib.types.str;
+      description = "The directory of this flake in the file system (not in store)";
+      default = let home = config.hostSpec.home; in "${home}/cfg";
     };
   };
 }

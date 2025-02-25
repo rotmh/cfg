@@ -4,9 +4,18 @@ My NixOS system configuration.
 
 ### `dofiles` management
 
-The configuration files for programs are not written using home-manager (which
-provides modules for configuring many popular programs), they are managed by
-setting up out-of-store symlinks, using [`mkOutOfStoreSymlink`](https://github.com/nix-community/home-manager/blob/12e26a74e5eb1a31e13daaa08858689e25ebd449/modules/files.nix#L64).
+The configuration files for programs are written using two methods:
+
+#### home-manager
+
+Which provides modules for configuring many popular programs.
+
+#### out-of-store symlinks, using [`mkOutOfStoreSymlink`](https://github.com/nix-community/home-manager/blob/12e26a74e5eb1a31e13daaa08858689e25ebd449/modules/files.nix#L64)
+
+This method is especially comfortable for configurations in specific languages
+(like `lua` for `WezTerm`), that way we can write the config in the language we
+want (thus leveraging language server support, syntax highlighting, etc.), or
+configs that provide hot-reload (like `WezTerm` and `Hyprland`).
 
 At the time of writing, the `mkOutOfStoreSymlink` function lacks any kind of
 documentation, so briefly:
@@ -33,7 +42,7 @@ It's important to notice that if we use flakes (which we are), we need to pass
 the path as a string of the absolute path (`"/fullpath"` instead of `../file`),
 according to [this post](https://discourse.nixos.org/t/how-to-manage-dotfiles-with-home-manager/30576/3).
 Fortunately, this can be simplified by using the built in `toString` function,
-like so (full example):
+like so:
 
 ```nix
 # ./home/rotemh/common/core/wezterm/default.nix

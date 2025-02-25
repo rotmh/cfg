@@ -1,11 +1,12 @@
 {
+  lib,
   pkgs,
   config,
   ...
 }: {
   imports = [
     ./hyprland
-    ./waybar.nix
+    ./waybar
     ./rofi.nix
     ./dunst.nix
   ];
