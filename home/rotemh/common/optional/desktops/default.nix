@@ -11,11 +11,11 @@
     ./dunst.nix
   ];
 
-  hyprland = {
-    wallpaper = "${config.xdg.userDirs.pictures}/wallpapers/city-rain.png";
-    hcursor = "bibata-modern-classic-hyprcursor";
-    xcursor = "bibata-modern-classic-xcursor";
-  };
+  # hyprland = {
+  #   wallpaper = "${config.xdg.userDirs.pictures}/wallpapers/city-rain.png";
+  #   hcursor = "bibata-modern-classic-hyprcursor";
+  #   xcursor = "bibata-modern-classic-xcursor";
+  # };
 
   services.avizo.enable = true;
 

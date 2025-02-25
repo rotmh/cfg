@@ -2,6 +2,17 @@
 
 My NixOS system configuration.
 
+## What's in the box
+
+| Category        | Programs |
+| --------------- | -------- |
+| Terminals       | WezTerm  |
+| Code Editors    | Helix    |
+| Shells          | Fish     |
+| Window Managers | Hyprland |
+
+## Docs
+
 ### `dofiles` management
 
 The configuration files for programs are written using two methods:
@@ -41,11 +52,15 @@ directory, in a way that will be synced immediately with the actual config file
 It's important to notice that if we use flakes (which we are), we need to pass
 the path as a string of the absolute path (`"/fullpath"` instead of `../file`),
 according to [this post](https://discourse.nixos.org/t/how-to-manage-dotfiles-with-home-manager/30576/3).
-Fortunately, this can be simplified by using the built in `toString` function,
-like so:
+
+Fortunately, this can be simplified by using a helper function, adapted from
+[here](https://github.com/ncfavier/config/blob/954cbf4f569abe13eab456301a00560d82bd0165/modules/nix.nix#L12-L14)
+from this [comment](https://github.com/nix-community/home-manager/issues/676#issuecomment-1595795685).
+The helper is located in the helpers module (`modules/common/helpers.nix`), and
+can be used like so:
 
 ```nix
-# ./home/rotemh/common/core/wezterm/default.nix
+# home/rotemh/common/core/wezterm/default.nix
 
 {
   pkgs,
@@ -57,8 +72,23 @@ like so:
   ];
 
   xdg.configFile."wezterm" = {
-    source = config.lib.file.mkOutOfStoreSymlink (toString ./wezterm);
+    source = config.lib.meta.mkMutableSymlink ./wezterm;
     recursive = true;
   };
 }
 ```
+
+Note, the helper uses the `flake` field in the `hostSpec` set, defined in the
+`host-spec` module, which is supposed to hold the path to the directory of the
+system configuration flake (the directory of this `README.md`). Currently, it's
+defined as:
+
+```nix
+flake = lib.mkOption {
+  type = lib.types.str;
+  description = "The directory of this flake in the file system (not in store)";
+  default = let home = config.hostSpec.home; in "${home}/cfg";
+};
+```
+
+So if you have the flake somewhere else in your filesystem, override this field.
