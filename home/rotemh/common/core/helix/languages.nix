@@ -11,7 +11,12 @@
       };
       rust-analyzer.config = {
         check.command = "clippy";
-        cargo.features = "all";
+        cargo = {
+          # Make r-a use a different target directory, to prevent from locking
+          # `Cargo.lock` at the expense of duplicating build artifacts.
+          targetDir = true;
+          features = "all";
+        };
       };
       nixd = {
         command = lib.getExe pkgs.nixd;
@@ -20,9 +25,19 @@
       crates-lsp.command = "/home/rotemh/projects/crates-language-server/target/debug/crates-language-server";
       tailwindcss-ls = {
         command = lib.getExe pkgs.tailwindcss-language-server;
-        config.userLanguages = {
-          rust = "html";
-          "*.rs" = "html";
+        args = ["--stdio"];
+        config = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = [
+                " \\.\"([^\"]*)\""
+              ];
+            };
+          };
+          userLanguages = {
+            rust = "html";
+            "*.rs" = "html";
+          };
         };
       };
     };
