@@ -36,6 +36,13 @@
         pagedown = "no_op";
         home = "no_op";
         end = "no_op";
+
+        C-y = [
+          ":sh rm -f /tmp/yazi-path"
+          ":insert-output yazi %{buffer_name} --chooser-file=/tmp/yazi-path"
+          ":open %sh{cat /tmp/yazi-path}"
+          ":redraw"
+        ];
       };
     };
   };

@@ -17,5 +17,7 @@
     ./common/optional/apps
     ./common/optional/dev
     ./common/optional/terminal
+
+    ./common/optional/yazi.nix
   ];
 }

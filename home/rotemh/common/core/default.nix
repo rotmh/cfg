@@ -72,6 +72,8 @@
     zlib
     qpdf
 
+    cachix
+
     gcc
     lldb
 

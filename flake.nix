@@ -27,6 +27,8 @@
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    yazi-git.url = "github:sxyazi/yazi";
   };
 
   outputs = {
