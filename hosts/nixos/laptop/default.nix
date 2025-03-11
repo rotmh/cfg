@@ -9,6 +9,8 @@
       "hosts/common/optional/hyprland.nix" # window manager
       "hosts/common/optional/vlc.nix" # media player
       "hosts/common/optional/ollama.nix" # locally run LLMs
+
+      "hosts/common/optional/auto-switch.nix" # rebuild the system every night
     ])
   ];
 
