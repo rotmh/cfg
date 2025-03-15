@@ -12,7 +12,7 @@
   systemd.timers."flake-update" = {
     wantedBy = ["timers.target"];
     timerConfig = {
-      OnCalendar = "02:00";
+      OnCalendar = "04:00";
       Persistent = true;
     };
   };
