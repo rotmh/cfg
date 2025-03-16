@@ -2,4 +2,4 @@
 
 set song (playerctl metadata title) || exit
 
-echo "  $song"
+echo "  $song"
