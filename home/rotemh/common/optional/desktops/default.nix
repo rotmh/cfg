@@ -2,8 +2,8 @@
   imports = [
     ./hyprland
     ./waybar
+    ./dunst
     ./rofi.nix
-    ./dunst.nix
   ];
 
   # hyprland = {
@@ -24,5 +24,7 @@
     slurp
     hyprpicker
     hyprshot
+
+    wf-recorder
   ];
 }

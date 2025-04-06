@@ -6,9 +6,9 @@ local config = {}
 -- Use config builder object if possible
 if wezterm.config_builder then config = wezterm.config_builder() end
 
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("JetBrainsMonoNL Nerd Font")
 
-config.color_scheme = "kanagawabones"
+config.color_scheme = "carbonfox"
 config.colors = {
   cursor_bg = "white",
   cursor_border = "white",

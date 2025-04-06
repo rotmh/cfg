@@ -25,7 +25,6 @@ in {
     tree
     coreutils
     which
-    bat
     fzf
     jq
     htop

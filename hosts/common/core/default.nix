@@ -20,6 +20,7 @@
     ./sops.nix
     ./bluetooth.nix
     ./wifi.nix
+    ./bat.nix
   ];
 
   programs.gnupg = {

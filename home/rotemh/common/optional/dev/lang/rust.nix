@@ -21,6 +21,7 @@
 
     cargo-expand
     cargo-watch
+    cargo-flamegraph
 
     trunk
   ];

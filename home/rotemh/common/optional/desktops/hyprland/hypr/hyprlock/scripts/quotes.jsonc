@@ -1,4 +1,5 @@
 ﻿[
+  // source: https: //github.com/vinitshahdeo/inspirational-quotes/blob/98d7a8d1148727873a20fd6b947880725bd6d8e7/data/data.json
   {
     "text": "The only people who never fail are those who never try.",
     "from": "Ilka Chase"
@@ -1307,6 +1308,11 @@
     "text": "When you have a dream, you've got to grab it and never let go.",
     "from": "Carol Burnett"
   },
+  // ,----------,
+  // |  CUSTOM  |
+  // `----------`
+  // 
+  // Arcane
   {
     "text": "In the pursuit of great, we failed to do good.",
     "from": "Viktor, Arcane"
@@ -1318,5 +1324,15 @@
   {
     "text": "Sometimes taking a leap forward means leaving a few things behind.",
     "from": "Ekko, Arcane"
+  },
+  // 
+  // General
+  {
+    "text": "May your choices reflect your hopes, not your fears.",
+    "from": "Nelson Mandela"
+  },
+  {
+    "text": "Be the change you wish to see in the world.",
+    "from": "Mahatma Gandhi"
   }
 ]

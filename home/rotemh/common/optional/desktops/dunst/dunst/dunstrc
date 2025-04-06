@@ -1,0 +1,17 @@
+[global]
+	enable_posix_regex = true
+	frame_width = 1
+	font = Atkinson Hyperlegible Next
+	corner_radius = 4
+
+[urgency_low]
+	foreground = "#f2f3f4bf"
+	background = "#222222bf"
+
+[urgency_normal]
+	foreground = "#f2f3f4bf"
+	background = "#222222bf"
+
+[urgency_critical]
+	foreground = "#f2f3f4bf"
+	background = "#222222bf"

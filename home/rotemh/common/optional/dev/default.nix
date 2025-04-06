@@ -2,6 +2,7 @@
   imports = [
     ./lang
 
+    ./docker.nix
     ./cli.nix
   ];
 
