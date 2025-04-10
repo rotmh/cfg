@@ -13,6 +13,7 @@ config.colors = {
   cursor_bg = "white",
   cursor_border = "white",
 }
+config.window_background_opacity = 0.78
 
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = false
@@ -31,7 +32,7 @@ wezterm.on("update-right-status", function(window, pane)
   local cwd = pane:get_current_working_dir()
   if cwd then
     if type(cwd) == "userdata" then
-      -- Wezterm introduced the URL object in 20240127-113634-bbcac864
+      -- Wezterm introduced the URL obscroll_lines_per_input_lineject in 20240127-113634-bbcac864
       cwd = basename(cwd.file_path)
     else
       -- 20230712-072601-f4abf8fd or earlier version
