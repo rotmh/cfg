@@ -16,7 +16,7 @@ end
 
 function print_state
     if test "$mute" = yes
-        echo " "
+        echo mut
     else
         echo "$vol"
     end

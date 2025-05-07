@@ -15,4 +15,4 @@ else
     set icon " " # Full
 end
 
-echo "$icon  $battery_level%"
+echo "$icon  $battery_level"
