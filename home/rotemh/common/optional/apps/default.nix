@@ -4,6 +4,9 @@
     spotify
     discord
     element-desktop
-    gimp
+    # gimp
+    # davinci-resolve
+
+    github-cli
   ];
 }

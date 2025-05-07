@@ -12,4 +12,5 @@ set random_quote $quotes[$index]
 set text (echo $random_quote | jq -r ".text")
 set from (echo $random_quote | jq -r ".from")
 
-echo -e "$text\n\n    — $from  [$index/$count]" | fold --spaces
+# echo -e "$text\n\n    — $from  [$index/$count]" | fold --spaces
+echo -e "$text\n\n    — $from" | fold --spaces

@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs,
   config,
   ...
@@ -8,7 +9,9 @@
     hyprcursor
     hyprpaper
     hyprsunset
-    hyprlock
+    hyprpicker
+
+    (inputs.hyprlock-git.packages.${pkgs.system}.default)
 
     xdg-desktop-portal-hyprland
   ];

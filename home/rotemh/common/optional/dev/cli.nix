@@ -3,5 +3,8 @@
     live-server
     smartcat
     openvpn
+    gnumake
+
+    tree-sitter
   ];
 }

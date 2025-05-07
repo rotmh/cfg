@@ -18,6 +18,17 @@ in {
       ".direnv/"
     ];
 
+    aliases = {
+      diffx = ''
+        !f() { 
+          paths=\"\"; 
+          for p in \"$@\"; do 
+            paths=\"$paths ':(exclude)$p'\"; 
+          done; 
+          eval git diff HEAD -- . $paths; 
+        }; f'';
+    };
+
     signing = {
       signByDefault = true;
 

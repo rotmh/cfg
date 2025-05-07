@@ -3,7 +3,7 @@
     "$mainMod" = "SUPER";
 
     bind = [
-      "$mainMod, Z, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
+      "$mainMod, Z, exec, hyprctl switchxkblayout all next"
 
       "$mainMod, C, killactive"
       "$mainMod, M, exit"

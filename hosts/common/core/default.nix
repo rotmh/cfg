@@ -45,7 +45,7 @@
   # uncomment if you want home-manager to backup existing file it wants to
   # write, instead of just aborting when encountering them.
   #
-  home-manager.backupFileExtension = "home_manager_backup";
+  # home-manager.backupFileExtension = "home_manager_backup";
 
   nixpkgs = {
     overlays = [
@@ -82,6 +82,7 @@
       experimental-features = [
         "nix-command"
         "flakes"
+        "pipe-operators"
       ];
     };
   };

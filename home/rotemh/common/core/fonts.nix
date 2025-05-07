@@ -3,14 +3,16 @@
     enable = true;
 
     defaultFonts = {
-      sansSerif = ["Atkinson Hyperlegible Next"];
-      monospace = ["Atkinson Hyperlegible Mono"];
+      sansSerif = ["Iosevka Regular"];
+      monospace = ["JetBrainsMonoNL Nerd Font"];
     };
   };
 
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.noto
+
+    iosevka
 
     atkinson-hyperlegible-next
     atkinson-hyperlegible-mono

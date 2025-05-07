@@ -1,10 +1,16 @@
 {
   pkgs,
   lib,
+  hostSpec,
   ...
 }: {
   programs.helix.languages = {
     language-server = {
+      # A language server for Hyprlang (the cofiguration format of Hyprland).
+      hyprls = {
+        # command = lib.getExe pkgs.hyprls;
+        command = "/home/rotemh/projects/hyprlang-language-server/target/debug/hyprlang-language-server";
+      };
       harper-ls = {
         command = "harper-ls";
         args = ["--stdio"];
@@ -20,7 +26,15 @@
       };
       nixd = {
         command = lib.getExe pkgs.nixd;
-        # TODO: configurate to support external flakes
+        config.nixd = let
+          flake = hostSpec.flake;
+          host = hostSpec.hostName;
+        in {
+          options = {
+            nixos.expr = "(builtins.getFlake \"${flake}\").nixosConfigurations.${host}.options";
+            home_manager.expr = "(builtins.getFlake \"${flake}\").nixosConfigurations.${host}.options.home-manager.users.type.getSubOptions []";
+          };
+        };
       };
       crates-lsp.command = "/home/rotemh/projects/crates-language-server/target/debug/crates-language-server";
       tailwindcss-ls = {
@@ -47,7 +61,7 @@
         name = "rust";
         language-servers = [
           "rust-analyzer"
-          "tailwindcss-ls"
+          # "tailwindcss-ls"
         ];
       }
       {
@@ -69,6 +83,12 @@
           tab-width = 2;
           unit = "  ";
         };
+      }
+      {
+        name = "hyprlang";
+        language-servers = [
+          "hyprls"
+        ];
       }
       {
         name = "c";

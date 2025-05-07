@@ -23,7 +23,7 @@
   "hyprland/language": {
     "format-en": "en",
     "format-he": "he",
-    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+    "on-click": "hyprctl switchxkblayout all next"
   },
   "hyprland/submap": {
     "format": "{}",

@@ -9,7 +9,7 @@
   };
 
   home.packages = with pkgs; [
-    (inputs.fenix.packages.${system}.latest.withComponents [
+    (inputs.fenix.packages.${system}.complete.withComponents [
       "cargo"
       "clippy"
       "rust-src"

@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = [
-    # https://github.com/NixOS/nixpkgs/issues/155092#issuecomment-2250032204
+    # ref: <https://github.com/NixOS/nixpkgs/issues/155092#issuecomment-2250032204>
     #
     # VLC starts on XWayland if DISPLAY is set (which we need to have for legacy apps)
     # Wrap it

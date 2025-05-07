@@ -3,6 +3,7 @@
     ghc
 
     cabal-install
+    stack
 
     haskell-language-server
 

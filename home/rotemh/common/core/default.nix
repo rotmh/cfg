@@ -74,6 +74,8 @@
 
     cachix
 
+    pulseaudio
+
     gcc
     lldb
 
@@ -100,6 +102,7 @@
       experimental-features = [
         "nix-command"
         "flakes"
+        "pipe-operators"
       ];
       warn-dirty = false;
     };
