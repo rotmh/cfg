@@ -13,7 +13,7 @@
       "hosts/common/optional/docker.nix"
       "hosts/common/optional/auto-switch.nix" # rebuild the system every night
 
-      # "hosts/common/optional/vpn-setup.nix"
+      "hosts/common/optional/vpn-setup.nix"
     ])
   ];
 

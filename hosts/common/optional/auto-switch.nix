@@ -9,7 +9,7 @@
 
   systemd.user.services.update-flake-inputs = {
     script = ''
-      nix flake update --flake ${inputs.self.outPath}
+      /run/current-system/sw/bin/nix flake update --flake ${inputs.self.outPath}
     '';
     serviceConfig = {
       Type = "oneshot";

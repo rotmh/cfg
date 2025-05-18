@@ -1,6 +1,6 @@
 {
   programs.helix.settings = {
-    theme = "my_theme";
+    theme = "github_dark";
     editor = {
       line-number = "relative";
       mouse = false;

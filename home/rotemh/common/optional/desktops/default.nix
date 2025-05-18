@@ -4,7 +4,7 @@
     ./waybar
     ./dunst
     ./rofi.nix
-    # ./sherlock.nix
+    ./sherlock.nix
   ];
 
   # hyprland = {
