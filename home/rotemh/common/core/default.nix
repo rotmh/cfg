@@ -19,6 +19,7 @@
     ./starship.nix
     ./helix
     ./wezterm
+    ./alacritty.nix
     ./tmux.nix
   ];
 

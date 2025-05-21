@@ -7,13 +7,14 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 config.font = wezterm.font("JetBrainsMonoNL Nerd Font")
+config.font_size = 11.0
 
-config.color_scheme = "carbonfox"
+config.color_scheme = "Batman"
 config.colors = {
   cursor_bg = "white",
   cursor_border = "white",
 }
-config.window_background_opacity = 0.78
+-- config.window_background_opacity = 0.78
 
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = false
