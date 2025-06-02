@@ -8,10 +8,19 @@
     # davinci-resolve
 
     github-cli
+
+    zellij
+
+    wiki-tui
+
+    kakoune
   ];
+
+  programs.ncspot = {
+    enable = true;
+  };
 
   programs.eww = {
     enable = true;
-    package = pkgs.eww-wayland;
   };
 }
