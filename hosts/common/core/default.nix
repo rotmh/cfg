@@ -30,10 +30,17 @@
     };
   };
 
-  services.tlp.enable = true;
+  services.tlp = {
+    enable = true;
+
+    settings = {
+      START_CHARGE_THRESH_BAT0 = 75;
+      STOP_CHARGE_THRESH_BAT0 = 80;
+    };
+  };
 
   hostSpec = {
-    username = "rotemh";
+    username = "rotmh";
     handle = "rotmh";
     inherit (inputs.nix-secrets) email network;
   };
@@ -45,7 +52,7 @@
   # uncomment if you want home-manager to backup existing file it wants to
   # write, instead of just aborting when encountering them.
   #
-  # home-manager.backupFileExtension = "home_manager_backup";
+  home-manager.backupFileExtension = "home_manager_backup";
 
   nixpkgs = {
     overlays = [

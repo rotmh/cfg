@@ -1,5 +1,4 @@
 {
-  pkgs,
   config,
   hostSpec,
   ...
@@ -18,23 +17,11 @@ in {
       ".direnv/"
     ];
 
-    aliases = {
-      diffx = ''
-        !f() { 
-          paths=\"\"; 
-          for p in \"$@\"; do 
-            paths=\"$paths ':(exclude)$p'\"; 
-          done; 
-          eval git diff HEAD -- . $paths; 
-        }; f'';
-    };
-
     signing = {
       signByDefault = true;
 
-      # FIXME: it only address `rotemh`
-      #
       # key = builtins.readFile fingerprintPath;
+
       key = "FA5492BE76A4974A";
     };
 

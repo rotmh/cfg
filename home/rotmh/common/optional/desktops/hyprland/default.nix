@@ -16,6 +16,8 @@
     xdg-desktop-portal-hyprland
   ];
 
+  services.hyprpolkitagent.enable = true;
+
   xdg.configFile."hypr" = {
     source = config.lib.meta.mkMutableSymlink ./hypr;
     recursive = true;

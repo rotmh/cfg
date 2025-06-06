@@ -169,17 +169,17 @@ window#waybar {
 #battery {
 }
 
-#battery.warning {
-  color: @gold;
-}
+/* #battery.warning { */
+/* color: @gold; */
+/* } */
 
-#battery.critical {
-  color: @love;
-}
+/* #battery.critical { */
+/* color: @love; */
+/* } */
 
-#battery.charging {
-  color: @subtle;
-}
+/* #battery.charging { */
+/* color: @subtle; */
+/* } */
 
 #battery.critical:not(.charging) {
   animation-name: blink;

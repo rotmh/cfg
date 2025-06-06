@@ -2,7 +2,6 @@
 {
   inputs,
   config,
-  lib,
   hostSpec,
   ...
 }: let
@@ -23,6 +22,12 @@ in {
 
     secrets = {
       "users/${hostSpec.username}/gpg/fingerprint" = {
+        mode = "0444";
+      };
+      "users/${hostSpec.username}/gpg/private-key" = {
+        mode = "0400";
+      };
+      "users/${hostSpec.username}/gpg/public-key" = {
         mode = "0444";
       };
     };

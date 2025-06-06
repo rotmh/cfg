@@ -1,5 +1,11 @@
-{lib, ...}: {
+{
+  inputs,
+  lib,
+  ...
+}: {
   imports = lib.flatten [
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-p1
+
     ./hardware-configuration.nix
 
     (map lib.custom.relativeToRoot [
@@ -13,9 +19,17 @@
       "hosts/common/optional/docker.nix"
       "hosts/common/optional/auto-switch.nix" # rebuild the system every night
 
+      "hosts/common/optional/nvidia.nix"
+
       "hosts/common/optional/vpn-setup.nix"
     ])
   ];
+
+  services.fprintd.enable = true;
+  security.pam.services = {
+    login.fprintAuth = true;
+    sudo.fprintAuth = true;
+  };
 
   hostSpec = {
     hostName = "laptop";

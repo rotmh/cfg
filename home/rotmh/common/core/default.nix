@@ -25,6 +25,13 @@
 
   services.ssh-agent.enable = true;
 
+  # home.activation = {
+  #   importGpgKeys = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  #     ${lib.getExe pkgs.gnupg} --import ${config.sops.secrets."users/${hostSpec.username}/gpg/private-key".path}
+  #     ${lib.getExe pkgs.gnupg} --import ${config.sops.secrets."users/${hostSpec.username}/gpg/public-key".path}
+  #   '';
+  # };
+
   home = {
     username = lib.mkDefault hostSpec.username;
     homeDirectory = lib.mkDefault hostSpec.home;

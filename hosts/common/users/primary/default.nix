@@ -22,6 +22,7 @@ in {
   programs.direnv.enable = true;
   environment.systemPackages = with pkgs; [
     just
+    sops
     tree
     coreutils
     which

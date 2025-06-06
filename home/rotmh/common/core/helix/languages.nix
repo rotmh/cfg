@@ -9,7 +9,7 @@
       # A language server for Hyprlang (the cofiguration format of Hyprland).
       hyprls = {
         # command = lib.getExe pkgs.hyprls;
-        command = "/home/rotemh/projects/hyprlang-language-server/target/debug/hyprlang-language-server";
+        command = "/home/rotmh/projects/hyprlang-language-server/target/debug/hyprlang-language-server";
       };
       harper-ls = {
         command = "harper-ls";
@@ -36,7 +36,7 @@
           };
         };
       };
-      crates-lsp.command = "/home/rotemh/projects/crates-language-server/target/debug/crates-language-server";
+      crates-lsp.command = "/home/rotmh/projects/crates-language-server/target/debug/crates-language-server";
       tailwindcss-ls = {
         command = lib.getExe pkgs.tailwindcss-language-server;
         args = ["--stdio"];

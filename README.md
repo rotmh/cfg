@@ -60,7 +60,7 @@ The helper is located in the helpers module (`modules/common/helpers.nix`), and
 can be used like so:
 
 ```nix
-# home/rotemh/common/core/wezterm/default.nix
+# home/rotmh/common/core/wezterm/default.nix
 
 {
   pkgs,
