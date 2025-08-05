@@ -1,4 +1,5 @@
 {
+  pkgs,
   config,
   hostSpec,
   ...
@@ -38,4 +39,8 @@ in {
       };
     };
   };
+
+  home.packages = with pkgs; [
+    git-filter-repo
+  ];
 }

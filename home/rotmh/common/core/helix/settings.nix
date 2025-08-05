@@ -1,5 +1,7 @@
 {
   programs.helix.settings = {
+    # theme = "onelight";
+    # theme = "my_theme";
     theme = "github_dark";
     editor = {
       line-number = "relative";

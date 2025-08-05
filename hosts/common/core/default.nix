@@ -39,6 +39,8 @@
     };
   };
 
+  services.thermald.enable = true;
+
   hostSpec = {
     username = "rotmh";
     handle = "rotmh";

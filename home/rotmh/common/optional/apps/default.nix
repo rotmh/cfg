@@ -5,7 +5,7 @@
     discord
     element-desktop
     # gimp
-    # davinci-resolve
+    davinci-resolve
 
     github-cli
 
@@ -14,7 +14,11 @@
     wiki-tui
 
     kakoune
+
+    tofi
   ];
+
+  programs.nh.enable = true;
 
   programs.ncspot = {
     enable = true;

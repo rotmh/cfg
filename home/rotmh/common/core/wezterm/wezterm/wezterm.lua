@@ -14,7 +14,7 @@ config.colors = {
   cursor_bg = "white",
   cursor_border = "white",
 }
--- config.window_background_opacity = 0.78
+config.window_background_opacity = 0.78
 
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = false

@@ -36,7 +36,7 @@
           };
         };
       };
-      crates-lsp.command = "/home/rotmh/projects/crates-language-server/target/debug/crates-language-server";
+      crates-lsp.command = "/home/rotmh/projects/crates-language-server/target/release/crates-language-server";
       tailwindcss-ls = {
         command = lib.getExe pkgs.tailwindcss-language-server;
         args = ["--stdio"];
@@ -55,6 +55,16 @@
         };
       };
     };
+
+    grammar = [
+      {
+        name = "toml";
+        source = {
+          git = "https://github.com/ikatyang/tree-sitter-toml";
+          rev = "7cff70bbcbbc62001b465603ca1ea88edd668704";
+        };
+      }
+    ];
 
     language = [
       {

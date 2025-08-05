@@ -6,5 +6,9 @@
     gnumake
 
     tree-sitter
+
+    gdb
+
+    cmake
   ];
 }
