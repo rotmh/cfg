@@ -1,13 +1,18 @@
 import QtQuick
 
-import qs.modules.common.widgets
 import qs.config
+import qs.widgets
 
 Item {
-    y: BarConfig.position == BarConfig.Position.Top ? BarConfig.height : 0
+    id: root
+
+    y: BarConfig.position === BarConfig.Position.Top ? BarConfig.height : 0
 
     implicitHeight: BarConfig.rounding
     implicitWidth: parent.width
+
+    readonly property color bg: BarConfig.bg
+    readonly property int size: BarConfig.rounding
 
     RoundCorner {
         id: leftCorner
@@ -18,9 +23,9 @@ Item {
             left: parent.left
         }
 
-        corner: BarConfig.position == BarConfig.Position.Top ? RoundCorner.Corner.TopLeft : RoundCorner.Corner.BottomLeft
-        color: BarConfig.bgColor
-        size: BarConfig.rounding
+        corner: BarConfig.position === BarConfig.Position.Top ? RoundCorner.Corner.TopLeft : RoundCorner.Corner.BottomLeft
+        color: root.bg
+        size: root.size
     }
 
     RoundCorner {
@@ -32,8 +37,8 @@ Item {
             right: parent.right
         }
 
-        corner: BarConfig.position == BarConfig.Position.Top ? RoundCorner.Corner.TopRight : RoundCorner.Corner.BottomRight
-        color: BarConfig.bgColor
-        size: BarConfig.rounding
+        corner: BarConfig.position === BarConfig.Position.Top ? RoundCorner.Corner.TopRight : RoundCorner.Corner.BottomRight
+        color: root.bg
+        size: root.size
     }
 }

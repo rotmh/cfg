@@ -13,5 +13,5 @@ Singleton {
     readonly property int height: 40
     readonly property int rounding: 10
 
-    readonly property color bgColor: Appearance.palette.surface
+    readonly property color bg: Appearance.palette.surface
 }

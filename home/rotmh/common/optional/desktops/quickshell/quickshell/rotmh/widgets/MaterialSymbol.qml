@@ -5,7 +5,7 @@ import qs.config
 StyledText {
     required property string name
 
-    property real size: Appearance.font.size.normal
+    property real size: Appearance.font.size.small
     property bool fill: false
 
     renderType: Text.NativeRendering

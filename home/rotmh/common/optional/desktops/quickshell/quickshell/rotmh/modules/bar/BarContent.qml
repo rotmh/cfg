@@ -1,5 +1,6 @@
 import QtQuick
 
+import qs
 import qs.config
 import qs.widgets
 
@@ -7,18 +8,31 @@ Item {
     anchors {
         left: parent.left
         right: parent.right
-        top: BarConfig.position == BarConfig.Position.Top ? parent.top : undefined
-        bottom: BarConfig.position == BarConfig.Position.Bottom ? parent.bottom : undefined
+        top: BarConfig.position === BarConfig.Position.Top ? parent.top : undefined
+        bottom: BarConfig.position === BarConfig.Position.Bottom ? parent.bottom : undefined
     }
 
     implicitHeight: BarConfig.height
 
     Rectangle {
         anchors.fill: parent
-        color: BarConfig.bgColor
+        color: BarConfig.bg
     }
 
-    StyledRect {
+    Rectangle {
+        implicitWidth: 50
+        implicitHeight: 50
+
+        Ripple {
+            color: "#cccccc"
+        }
+
+        Text {
+            text: "hi"
+        }
+    }
+
+    MouseArea {
         anchors {
             top: parent.top
             bottom: parent.bottom
@@ -28,14 +42,31 @@ Item {
             rightMargin: Appearance.padding.normal
         }
 
-        // color: Appearance.palette.secondaryContainer
-        // radius: Appearance.rounding.full
-        implicitWidth: statusIcons.implicitWidth + Appearance.padding.normal * 2
+        implicitWidth: statusIconsRoot.implicitWidth
+        implicitHeight: statusIconsRoot.implicitHeight
 
-        StatusIcons {
-            id: statusIcons
+        onPressed: event => {
+            switch (event.button) {
+            case Qt.LeftButton:
+                GlobalState.rightSidebarOpen = !GlobalState.rightSidebarOpen;
+                break;
+            }
+        }
+
+        StyledRect {
+            id: statusIconsRoot
 
             anchors.centerIn: parent
+            implicitWidth: statusIcons.implicitWidth + Appearance.padding.smaller * 2
+            implicitHeight: statusIcons.implicitHeight + Appearance.padding.small * 2
+
+            color: Appearance.palette.secondaryContainer
+            radius: Appearance.rounding.full
+
+            StatusIcons {
+                id: statusIcons
+                anchors.centerIn: parent
+            }
         }
     }
 }

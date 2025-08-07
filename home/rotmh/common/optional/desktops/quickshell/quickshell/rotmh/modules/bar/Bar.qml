@@ -15,8 +15,8 @@ Scope {
                 screen: modelData
 
                 anchors {
-                    top: BarConfig.position == BarConfig.Position.Top
-                    bottom: BarConfig.position == BarConfig.Position.Bottom
+                    top: BarConfig.position === BarConfig.Position.Top
+                    bottom: BarConfig.position === BarConfig.Position.Bottom
                     left: true
                     right: true
                 }
@@ -29,7 +29,7 @@ Scope {
 
                 Loader {
                     anchors.fill: parent
-                    sourceComponent: BarConfig.position == BarConfig.Position.Top ? topBarLayout : bottomBarLayout
+                    sourceComponent: BarConfig.position === BarConfig.Position.Top ? topBarLayout : bottomBarLayout
                 }
 
                 Component {

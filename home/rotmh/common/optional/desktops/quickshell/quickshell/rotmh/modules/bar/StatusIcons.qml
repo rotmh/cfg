@@ -8,7 +8,7 @@ import qs.services
 Item {
     id: root
 
-    property color color: Appearance.palette.onSurface_
+    property color color: Appearance.palette.onSecondaryContainer_
 
     implicitHeight: iconsRow.implicitHeight
     implicitWidth: iconsRow.implicitWidth
@@ -21,11 +21,6 @@ Item {
         }
 
         spacing: Appearance.spacing.smaller / 2
-
-        MaterialSymbol {
-            name: Bluetooth.connected ? "bluetooth_connected" : Bluetooth.enabled ? "bluetooth" : "bluetooth_disabled"
-            color: root.color
-        }
 
         MaterialSymbol {
             name: Bluetooth.connected ? "bluetooth_connected" : Bluetooth.enabled ? "bluetooth" : "bluetooth_disabled"

@@ -2,13 +2,12 @@ pragma Singleton
 
 import QtQuick
 import Quickshell
-import Quickshell.Io
 import Quickshell.Bluetooth
 
 Singleton {
     property string deviceName: ""
     property string deviceAddress: ""
-    property bool enabled: Bluetooth.defaultAdapter.state == BluetoothAdapterState.Enabled
+    property bool enabled: Bluetooth.defaultAdapter.state === BluetoothAdapterState.Enabled
     property bool connected: true
 
     // Timer {
