@@ -12,7 +12,7 @@
 
     ./common/optional/sops.nix
 
-    ./common/optional/browsers/firefox.nix
+    ./common/optional/browsers/firefox
     ./common/optional/browsers/tor.nix
 
     ./common/optional/desktops
