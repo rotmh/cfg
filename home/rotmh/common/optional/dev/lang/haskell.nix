@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     ghc
 
@@ -8,5 +9,6 @@
     haskell-language-server
 
     stylish-haskell
+    ormolu
   ];
 }

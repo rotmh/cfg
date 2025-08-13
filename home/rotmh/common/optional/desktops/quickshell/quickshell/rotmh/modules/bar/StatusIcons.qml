@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 
 import qs.config
-import qs.widgets
+import qs.material
 import qs.services
 
 Item {
@@ -22,7 +22,7 @@ Item {
 
         spacing: Appearance.spacing.smaller / 2
 
-        MaterialSymbol {
+        Symbol {
             name: Bluetooth.connected ? "bluetooth_connected" : Bluetooth.enabled ? "bluetooth" : "bluetooth_disabled"
             color: root.color
         }

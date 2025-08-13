@@ -3,7 +3,8 @@
   lib,
   hostSpec,
   ...
-}: {
+}:
+{
   programs.helix.languages = {
     language-server = {
       # A language server for Hyprlang (the cofiguration format of Hyprland).
@@ -13,7 +14,7 @@
       };
       harper-ls = {
         command = "harper-ls";
-        args = ["--stdio"];
+        args = [ "--stdio" ];
       };
       rust-analyzer.config = {
         check.command = "clippy";
@@ -26,20 +27,22 @@
       };
       nixd = {
         command = lib.getExe pkgs.nixd;
-        config.nixd = let
-          flake = hostSpec.flake;
-          host = hostSpec.hostName;
-        in {
-          options = {
-            nixos.expr = "(builtins.getFlake \"${flake}\").nixosConfigurations.${host}.options";
-            home_manager.expr = "(builtins.getFlake \"${flake}\").nixosConfigurations.${host}.options.home-manager.users.type.getSubOptions []";
+        config.nixd =
+          let
+            flake = hostSpec.flake;
+            host = hostSpec.hostName;
+          in
+          {
+            options = {
+              nixos.expr = "(builtins.getFlake \"${flake}\").nixosConfigurations.${host}.options";
+              home_manager.expr = "(builtins.getFlake \"${flake}\").nixosConfigurations.${host}.options.home-manager.users.type.getSubOptions []";
+            };
           };
-        };
       };
       crates-lsp.command = "/home/rotmh/projects/crates-language-server/target/release/crates-language-server";
       tailwindcss-ls = {
         command = lib.getExe pkgs.tailwindcss-language-server;
-        args = ["--stdio"];
+        args = [ "--stdio" ];
         config = {
           tailwindCSS = {
             experimental = {
@@ -106,14 +109,14 @@
       }
       {
         name = "haskell";
-        formatter.command = lib.getExe pkgs.stylish-haskell;
+        auto-format = true;
       }
       {
         name = "nix";
         language-servers = [
           "nixd"
         ];
-        formatter.command = lib.getExe pkgs.alejandra;
+        # formatter.command = lib.getExe pkgs.alejandra;
         auto-format = true;
       }
       {

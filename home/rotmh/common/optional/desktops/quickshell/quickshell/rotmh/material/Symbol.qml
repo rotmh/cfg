@@ -1,15 +1,15 @@
 import QtQuick
 
 import qs.config
+import qs.widgets
 
 StyledText {
     required property string name
 
-    property real size: Appearance.font.size.small
+    property real size: Appearance.font.size.smaller
     property bool fill: false
 
     renderType: Text.NativeRendering
-    verticalAlignment: Text.AlignVCenter
 
     font {
         family: Appearance.font.family.material

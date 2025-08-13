@@ -13,13 +13,15 @@ Text {
     property real animateTo: 1
     property int animateDuration: Appearance.anim.durations.normal
 
+    verticalAlignment: Text.AlignVCenter
+
     renderType: Text.NativeRendering
     textFormat: Text.PlainText
     color: Appearance.palette.onSurface_
 
     font {
         family: Appearance.font.family.sans
-        pointSize: Appearance.font.size.smaller
+        pointSize: Appearance.font.size.small
     }
 
     Behavior on color {

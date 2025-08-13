@@ -16,6 +16,7 @@ MouseArea {
     id: root
 
     required property color color
+    property int radius: 0
 
     anchors.fill: parent
     clip: true
@@ -145,6 +146,7 @@ MouseArea {
                 y: 0
                 width: ripple.width
                 height: ripple.height
+                radius: root.radius
             }
         }
     }

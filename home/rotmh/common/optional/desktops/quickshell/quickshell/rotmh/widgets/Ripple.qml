@@ -16,6 +16,7 @@ MouseArea {
     id: root
 
     required property color color
+    property int rounding: Appearance.rounding.full
 
     anchors.fill: parent
     clip: true
@@ -145,6 +146,7 @@ MouseArea {
                 y: 0
                 width: ripple.width
                 height: ripple.height
+                radius: root.rounding
             }
         }
     }

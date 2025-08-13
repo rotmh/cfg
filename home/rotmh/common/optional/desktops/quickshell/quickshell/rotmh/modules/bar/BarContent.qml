@@ -3,6 +3,7 @@ import QtQuick
 import qs
 import qs.config
 import qs.widgets
+import qs.material
 
 Item {
     anchors {
@@ -19,16 +20,9 @@ Item {
         color: BarConfig.bg
     }
 
-    Rectangle {
-        implicitWidth: 50
-        implicitHeight: 50
-
-        Ripple {
-            color: "#cccccc"
-        }
-
-        Text {
-            text: "hi"
+    Button {
+        content: Symbol {
+            name: "bluetooth"
         }
     }
 
